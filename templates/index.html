@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Country Profile Helper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automated Country Profile Helper</h1>
+            <p class="subtitle">Country profile assistance for MUN delegates!</p>
+        </header>
+        
+        <div class="search-card">
+            <form method="POST">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        name="country" 
+                        placeholder="Search a country (e.g., France, Brazil)..." 
+                        value="{{ country.title() if country else '' }}"
+                        required
+                    >
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        {% if error %}
+            <div class="error-banner">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        {% if country_data %}
+            <div class="results-card">
+                <h2>{{ country.title() }}</h2>
+                <table class="data-table">
+                    <tbody>
+                        {% if country_data is mapping %}
+                            {% for key, val in country_data.items() %}
+                                <tr>
+                                    <th>{{ key }}</th>
+                                    <td>{{ val }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="2">{{ country_data }}</td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
