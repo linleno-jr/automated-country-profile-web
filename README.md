@@ -4,10 +4,10 @@
 This program provides information on various countries to help MUN delegates write their country profiles. It allows the user to search for a country by name and receive much of the information they will need to understand the country's background.
 
 ## How To Use ##
-This program is available to use on the web. Just type a country's name in the search bar and all the information will be available.
+This program is available to use on the web at [this link](https://automated-country-profile-web.onrender.com/). Just type a country's name in the search bar and all the information will be available.
 
 ## Built With ##
-This program was written in Python 3, Flask, and HTML/CSS. It uses information coming from the dataset linked [here](https://www.kaggle.com/datasets/lucafrance/the-world-factbook-by-cia), which is a copy of the CIA World Factbook last updated March 14, 2025.
+This program was written in Python 3, Flask, and HTML/CSS. It uses information coming from the dataset linked [here](https://www.kaggle.com/datasets/lucafrance/the-world-factbook-by-cia), which is a copy of the CIA World Factbook last updated March 14, 2025. It is hosted using Render.
 
 ## Program Limitations ##
 The program currently cannot answer:
@@ -19,6 +19,7 @@ The program currently cannot answer:
  - question 6
  - question 9 
  - or the relative size in region in question 3c
+The program will also run slowly on startup due to being limited to Render's free tier.
 
 ## List of countries included ##
 - Afghanistan
