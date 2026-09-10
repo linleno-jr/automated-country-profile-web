@@ -1,0 +1,218 @@
+# Automated Country Profile Helper
+
+## Description ##
+This program provides information on various countries to help MUN delegates write their country profiles. It allows the user to search for a country by name and receive much of the information they will need to understand the country's background.
+
+## How To Use ##
+This program is available to use on the web. Just type a country's name in the search bar and all the information will be available.
+
+## Built With ##
+This program was written in Python 3, Flask, and HTML/CSS. It uses information coming from the dataset linked [here](https://www.kaggle.com/datasets/lucafrance/the-world-factbook-by-cia), which is a copy of the CIA World Factbook last updated March 14, 2025.
+
+## Program Limitations ##
+The program currently cannot answer:
+ - question 7
+ - question 20
+ - human trafficking issues on question 16
+ - the map on question 3
+ - the organization of government in question 4
+ - question 6
+ - question 9 
+ - or the relative size in region in question 3c
+
+## List of countries included ##
+- Afghanistan
+- Albania
+- Algeria
+- Andorra
+- Angola
+- Antigua and Barbuda
+- Argentina
+- Armenia
+- Australia
+- Austria
+- Azerbaijan
+- The Bahamas
+- Bahrain
+- Bangladesh
+- Barbados
+- Belarus
+- Belgium
+- Belize
+- Benin
+- Bhutan
+- Bolivia
+- Bosnia and Herzegovina
+- Botswana
+- Brazil
+- Brunei
+- Bulgaria
+- Burkina Faso
+- Burma
+- Burundi
+- Cabo Verde
+- Cambodia
+- Cameroon
+- Canada
+- Central African Republic
+- Chad
+- Chile
+- China
+- Colombia
+- Comoros
+- Democratic Republic of the Congo
+- Republic of the Congo
+- Costa Rica
+- Croatia
+- Cuba
+- Cyprus
+- Czechia
+- Denmark
+- Djibouti
+- Dominica
+- Dominican Republic
+- Ecuador
+- Egypt
+- El Salvador
+- Equatorial Guinea
+- Eritrea
+- Estonia
+- Eswatini
+- Ethiopia
+- Fiji
+- Finland
+- France
+- Gabon
+- The Gambia
+- Georgia
+- Germany
+- Ghana
+- Greece
+- Grenada
+- Guatemala
+- Guinea
+- Guinea-Bissau
+- Guyana
+- Haiti
+- Honduras
+- Hungary
+- Iceland
+- India
+- Indonesia
+- Iran
+- Iraq
+- Ireland
+- Israel
+- Italy
+- Jamaica
+- Japan
+- Jordan
+- Kazakhstan
+- Kenya
+- Kiribati
+- Kosovo
+- Kuwait
+- Kyrgyzstan
+- Laos
+- Latvia
+- Lebanon
+- Lesotho
+- Liberia
+- Libya
+- Liechtenstein
+- Lithuania
+- Luxembourg
+- Madagascar
+- Malawi
+- Malaysia
+- Maldives
+- Mali
+- Malta
+- Marshall Islands
+- Mauritania
+- Mauritius
+- Mexico
+- Micronesia
+- Moldova
+- Monaco
+- Mongolia
+- Montenegro
+- Morocco
+- Mozambique
+- Namibia
+- Nauru
+- Nepal
+- Netherlands
+- New Zealand
+- Nicaragua
+- Niger
+- Nigeria
+- North Korea
+- North Macedonia
+- Norway
+- Oman
+- Pakistan
+- Palau
+- Panama
+- Papua New Guinea
+- Paraguay
+- Peru
+- Philippines
+- Poland
+- Portugal
+- Qatar
+- Romania
+- Russia
+- Rwanda
+- Saint Kitts and Nevis
+- Saint Lucia
+- Saint Vincent and the Grenadines
+- Samoa
+- San Marino
+- Sao Tome and Principe
+- Saudi Arabia
+- Senegal
+- Serbia
+- Seychelles
+- Sierra Leone
+- Singapore
+- Slovakia
+- Slovenia
+- Solomon Islands
+- Somalia
+- South Africa
+- South Korea
+- South Sudan
+- Spain
+- Sri Lanka
+- Sudan
+- Suriname
+- Sweden
+- Switzerland
+- Syria
+- Taiwan
+- Tajikistan
+- Tanzania
+- Thailand
+- Timor-Leste
+- Togo
+- Tonga
+- Trinidad and Tobago
+- Tunisia
+- Turkey
+- Turkmenistan
+- Tuvalu
+- Uganda
+- Ukraine
+- United Arab Emirates
+- United Kingdom
+- United States
+- Uruguay
+- Uzbekistan
+- Vanuatu
+- Vatican City
+- Venezuela
+- Vietnam
+- Yemen
+- Zambia
+- Zimbabwe
