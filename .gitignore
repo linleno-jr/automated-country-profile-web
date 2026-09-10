@@ -1,4 +1,27 @@
-__pycache__/
-*.pyc
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
 
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Raw / Backup Data
 countries_original.csv
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor & IDE Settings
+.vscode/
+.idea/
+
+# Environment variables & secrets (good practice for future API keys)
+.env
+.env.*
+!.env.example
