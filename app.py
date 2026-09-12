@@ -1,6 +1,6 @@
 import pandas as pd
 from flask import Flask, render_template, request
-from country_io import get_country_info
+from country_io import get_country_info, country_name_converter
 from data.info import columns_needed
 
 app = Flask(__name__)
@@ -19,22 +19,17 @@ def index():
         # Get country name submitted via HTML form
         searched_country = request.form.get("country", "").strip().lower()
 
+        searched_country = country_name_converter(searched_country)
+
         if not searched_country:
             error = "Please enter a country name."
         elif searched_country not in df["Country"].values:
             error = f"'{searched_country.title()}' could not be found. Please check the spelling."
         else:
-            country_data = get_country_info(df, searched_country, columns_needed)
-
-
-        if searched_country:
             try:
-                # Reuse your get_country_info logic
                 country_data = get_country_info(df, searched_country, columns_needed)
             except Exception as e:
-                error = f"Error fetching details: {str(e)}. Please enter a valid country."
-        else:
-            error = "Please enter a country name."
+                error = f"An unexpected error occurred: {str(e)}"
 
     return render_template(
         "index.html",

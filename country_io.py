@@ -1,5 +1,12 @@
 import pandas as pd
-from data.info import column_to_name
+from data.info import column_to_name, country_name_conversions
+
+def country_name_converter(country: str):
+    for official_name, alternate_names in country_name_conversions.items():
+        if country in alternate_names:
+            return official_name
+
+    return country
 
 def get_country_info(df, country: str, columns_needed: list):
     """ Returns information about a country
@@ -14,6 +21,8 @@ def get_country_info(df, country: str, columns_needed: list):
     """
 
     country_info = {}
+
+    country = country_name_converter(country)
 
     # printing out each column
     for column in columns_needed:
@@ -57,8 +66,10 @@ def get_input(df):
     while True:
         country = input("\nWhat is your country? ").lower();
 
+        country = country_name_converter(country)
+
         # making sure user's country is valid, if it is, return values, else redo process
-        if country.lower() in df["Country"].values:
+        if country in df["Country"].values:
             print(f"\nYour country: {country.title()}")
             input("\nPress enter to continue, or Ctrl + c to cancel: ")
 
